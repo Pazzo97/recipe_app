@@ -71,4 +71,6 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'devise', '~> 4.8'
+gem 'dotenv-rails'
 gem 'rubocop', '>= 1.0', '< 2.0'
