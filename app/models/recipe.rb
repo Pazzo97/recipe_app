@@ -7,5 +7,4 @@ class Recipe < ApplicationRecord
   validates :cooking_time, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 1 }
   validates :description, presence: true, allow_blank: true
   validates :public, inclusion: { in: [true, false] }
-
 end
