@@ -7,7 +7,7 @@ class GeneralShoppingListController < ApplicationController
     @foods = Food.where(id: @items.map(&:food_id))
     @price = total_price(@items)
   end
-  
+
   private
 
   def total_price(items)
