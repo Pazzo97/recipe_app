@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'recipe_foods/create'
+  get 'recipe_foods/destroy'
   root "home#index"
 
   devise_scope :user do
