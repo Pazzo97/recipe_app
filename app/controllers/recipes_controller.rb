@@ -1,10 +1,12 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @recipes = Recipe.all.where(user: current_user)
   end
 
   def show
-    @recipe = Recipe.find params[:id]
+    @recipe = Recipe.includes([:recipe_food]).find params[:id]
     @recipe_foods = @recipe.recipe_food
     @recipe_food = RecipeFood.new
   end

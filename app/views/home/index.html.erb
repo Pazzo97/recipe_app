@@ -1,32 +1,47 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-
-<table class="table table-bordered table-light">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td><button type="button" class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i> Edit</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td><button type="button" class="btn btn-sm btn-success"><i class="fa-solid fa-floppy-disk"></i> Save</button></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird </td>
-      <td><button type="button" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash-can"></i> Delete</button></td>
-    </tr>
-  </tbody>
-</table>
+<div class="mt-4">
+  <div class="p-4 p-md-5 mb-4 rounded text-white bg-dark">
+    <div class="col-md-8 px-0">
+      <h1 class="display-4 fst-italic">Welcome To the #1 Food Recipes website</h1>
+      <p class="lead my-3">Discover created recipes … or start your own recipe creations , easily
+        modifying ingredients and steps as you need! Save them all in one place
+        and cook them with joy</p>
+      <div class="lead mb-0"><a href="/public_recipes" class="btn btn-primary text-white fw-bold">Check Public Recipes</a></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="d-flex justify-content-center align-items-center flex-column mt-5">
+      <h2>
+        Recent Recipes</h2>
+      <% @recent_recipe.each do |recipe| %>
+        <%= render partial: "layouts/partials/recipe_card", locals: {
+    recipe: recipe,
+  } %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-6 d-flex align-items-center">
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-self-center
+        text-center
+        flex-column
+        mt-5
+      "
+    >
+      <h2>
+        Why Us ?</h2>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, perferendis recusandae. Minus quas sequi laudantium voluptatem rem enim maiores atque nisi, iusto eligendi numquam architecto. Sapiente quam eius, cumque, itaque quasi enim distinctio nihil natus, maxime ad repellat recusandae consequuntur!</p>
+      <h2>
+        Our History</h2>
+      <p>Recipe App was founded in 2022 by <a href="https://github.com/Pazzo97" target="_blank">Ali Jendoubi</a> as a home cooking
+        blog . Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde et itaque quibusdam perspiciatis, corporis animi quisquam vero illo at obcaecati minus odit ad ea ratione, illum omnis ullam accusamus similique molestiae tenetur! Dolorem, temporibus non magni facilis deleniti dignissimos dolorum?.</p>
+      <h2>
+        Recipe Development</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio voluptatum aliquam illo soluta fugit quia voluptas ut, dicta labore cupiditate?.</p>
+    </div>
+  </div>
+</div>

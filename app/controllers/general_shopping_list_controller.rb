@@ -8,6 +8,8 @@ class GeneralShoppingListController < ApplicationController
     @price = total_price(@items)
   end
 
+  private
+
   def total_price(items)
     price = 0
     items.each do |recipe_food|
